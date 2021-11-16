@@ -1,0 +1,325 @@
+/* -------------------------------------CSS Custom Properties------------------------- */
+:root {
+  --main-title-color: #ffffff;
+  --title-color: #212121;
+  --main-text-color: #757575;
+  --main-accent-color: #2196f3;
+  --logo-color: #000000;
+  --footer-contacts-color: #ffffff99;
+  --main-background-color: #e5e5e5;
+  --secondary-background-color: #ffffff;
+  --header-color: #ffffff;
+  --footer-color: #2f303a;
+  --background-section: #f5f4fa;
+  --first-button-color: #f5f4fa;
+  --second-button-color: #2196f3;
+}
+
+/*--------------------------Service Classes--------------------------------------------*/
+/* NEW Utility !!! should be first/higher in the document  */
+.list {
+  /* margin:0;
+  padding:0; */
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+/* --------------------------------Main Selectors------------------------------------- */
+
+body {
+  /* margin: 0; */
+  background-color: var(--secondary-background-color);
+  font-family: "Roboto", sans-serif;
+  /* font-style: normal; */
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+/* .container video2 
+39m 
+margin-left
+margin-right
+width
+padding-left
+padding-right
+outline: 1px solid tomato*/
+
+/* --------------------------------Header--------------------------------------------- */
+.header {
+  background-color: var(--header-color);
+}
+.header-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--main-accent-color);
+}
+.header-contacts-list .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+.header-contacts-list .link:hover,
+.header-contacts-list .link:focus {
+  color: var(--main-accent-color);
+}
+
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  word-spacing: -6px;
+}
+.header-web {
+  color: var(--main-accent-color);
+}
+.header-studio {
+  color: var(--logo-color);
+}
+
+/* ---------------------------NEW ------------------*/
+
+.header-list {
+  display: flex;
+  margin-left: 20px;
+}
+
+/* .header-item {
+  outline: 1px solid olive;
+  margin-right: 40px;
+}
+очистка крайней геометрии 
+
+.header-item: last child {
+  margin-right: 0;
+} */
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* .header-item+header-item{
+  margin-left: 40px;
+} */
+
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной илистрочно-блочной, но там тогда зазор справа */
+.header-link {
+  /* geometry */
+  display: flex;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  /* font + stiles  */
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+
+  /* decore */
+}
+
+/* auth nav ? */
+
+.header-contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+.header-contacts + .header-contacts {
+  margin-left: 12px;
+}
+
+.header-navigation {
+  display: flex;
+  /* ??? */
+  /* выравниваем относительно поперечной оси, то есть высоты  */
+  align-items: center;
+  /*растягиваем по нужным сторонам 
+  justify-content: ;*/
+}
+
+/* 48 inline-blof - better for buttons as the blok itself is as wide as the page , however link is limited by li */
+
+.order-service-btn {
+}
+.container {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header {
+  background-color: #fff;
+}
+.header-container {
+  width: 1440px;
+}
+
+/* ----------------------------------------------------Footer----------------------------------------------- */
+.footer {
+  background-color: var(--footer-color);
+}
+
+/*------------------------------------------------------ contact links---------------------------------------- */
+
+/*--------------------------------------add opacity to delute the color to make it softer --------
+  1)color: var(--main-title-color);
+    opacity: 60%; 
+  2) add numbers to the color hex name , 60% =99 => footer-contacts-color -------------------------------------------*/
+
+.footer-address-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--footer-contacts-color);
+}
+.footer-address-link:hover,
+.footer-address-link:focus {
+  color: var(--main-title-color);
+}
+/*--------------------------------------------------------logo------------------------------------------------*/
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  /*--------------------------------------------add negative word-spacing to bring letters together----------*/
+  word-spacing: -5px;
+}
+
+.footer-web {
+  color: var(--main-accent-color);
+}
+.footer-studio {
+  color: var(--main-title-color);
+}
+/* ------------------------------------------------MAIN SECTION PORTFOLIO---------------------------- */
+
+/* ------------------------------------------------Filters-------------------------------------------- */
+.filters-btn {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  background-color: var(--first-button-color);
+  cursor: pointer;
+}
+.filters-btn:hover,
+.filters-btn:focus,
+.filters-btn:active {
+  color: var(--main-title-color);
+  background-color: var(--second-button-color);
+}
+
+/* ------------------------------------------------Portfolio: Projects---------------------------------------- */
+.projects-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
+.projects-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.projects-item {
+  background-color: var(--secondary-background-color);
+}
+/* -----------------------------------------------Main WEB STUDIO ------------------------------------------- */
+/* ------------------------------------------------Heroe/ Banner------------------------------------------------ */
+.order-service {
+  background-color: var(--footer-color);
+}
+.order-service-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+.order-service-btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+  background-color: var(--second-button-color);
+  cursor: pointer;
+}
+.order-service-btn:active,
+.order-service-btn:focus {
+  color: var(--main-title-color);
+}
+/* -----------------------------------------------Our Features------------------------------------------- */
+.features-item-title {
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+/* ----------------------------------------------Our Team----------------------------------------------- */
+.team {
+  background-color: var(--background-section);
+}
+.team-item {
+  background-color: var(--secondary-background-color);
+}
+.team-person {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
