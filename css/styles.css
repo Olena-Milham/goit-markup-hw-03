@@ -41,6 +41,9 @@
 
 /* --------------------------------Main Selectors------------------------------------- */
 
+button {
+  cursor: pointer;
+}
 body {
   /* margin: 0; */
   background-color: var(--secondary-background-color);
@@ -101,7 +104,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -111,32 +114,11 @@ body {
 /* .container video2 
 39m 
 */
-
-.header-list {
+.wrapper {
   display: flex;
-
-  padding-left: 93px;
-
-  /* там есть какой-то странный отступ не могу понять что это... */
+  align-items: center;
+  justify-content: space-around;
 }
-
-/* .header-item {
-  outline: 1px solid olive;
-  margin-right: 40px;
-}
-очистка крайней геометрии 
-
-.header-item: last child {
-  margin-right: 0;
-} */
-
-.header-item:not(:last-child) {
-  margin-right: 40px;
-}
-
-/* .header-item+header-item{
-  margin-left: 40px;
-} */
 
 /* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной илистрочно-блочной, но там тогда зазор справа */
 .header-link {
@@ -156,6 +138,17 @@ body {
   /* decore */
 }
 
+.header-list {
+  display: flex;
+  padding-left: 93px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
 /* auth nav ? */
 
 .header-contacts-list {
@@ -165,20 +158,34 @@ body {
   margin-left: 12px;
 }
 
+/* .header-container {
+  display: flex;
+  margin-right: 0;
+/* выравниваем относительно поперечной оси, то есть высоты  */
+/* align-items: center; */
+/*растягиваем по нужным сторонам */
+/* justify-content: ; */
+/* }  */
+
+/* .header-item {
+  outline: 1px solid olive;
+  margin-right: 40px;
+}
+очистка крайней геометрии 
+
+.header-item: last child {
+  margin-right: 0;
+} */
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* .header-item+header-item{
+  margin-left: 40px;
+} */
 .header-contacts {
 }
-
-.header-navigation {
-  display: flex;
-
-  margin-right: 0;
-  /* ??? */
-  /* выравниваем относительно поперечной оси, то есть высоты  */
-  align-items: center;
-  /*растягиваем по нужным сторонам 
-  justify-content: ;*/
-}
-
 /* 48 inline-blof - better for buttons as the blok itself is as wide as the page , however link is limited by li */
 
 .order-service-btn {
