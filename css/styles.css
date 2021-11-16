@@ -18,14 +18,19 @@
 /*--------------------------Service Classes--------------------------------------------*/
 /* NEW Utility !!! should be first/higher in the document  */
 .list {
-  /* margin:0;
-  padding:0; */
+  /* ressets all the things given/set by browser */
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  /* ok? */
+
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -47,15 +52,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-
-/* .container video2 
-39m 
-margin-left
-margin-right
-width
-padding-left
-padding-right
-outline: 1px solid tomato*/
 
 /* --------------------------------Header--------------------------------------------- */
 .header {
@@ -102,9 +98,26 @@ outline: 1px solid tomato*/
 
 /* ---------------------------NEW ------------------*/
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1230px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid blue;
+}
+
+/* .container video2 
+39m 
+*/
+
 .header-list {
   display: flex;
-  margin-left: 20px;
+
+  padding-left: 93px;
+
+  /* там есть какой-то странный отступ не могу понять что это... */
 }
 
 /* .header-item {
@@ -147,14 +160,18 @@ outline: 1px solid tomato*/
 
 .header-contacts-list {
   display: flex;
-  margin-left: auto;
 }
 .header-contacts + .header-contacts {
   margin-left: 12px;
 }
 
+.header-contacts {
+}
+
 .header-navigation {
   display: flex;
+
+  margin-right: 0;
   /* ??? */
   /* выравниваем относительно поперечной оси, то есть высоты  */
   align-items: center;
@@ -165,19 +182,6 @@ outline: 1px solid tomato*/
 /* 48 inline-blof - better for buttons as the blok itself is as wide as the page , however link is limited by li */
 
 .order-service-btn {
-}
-.container {
-  width: 1230px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.header {
-  background-color: #fff;
-}
-.header-container {
-  width: 1440px;
 }
 
 /* ----------------------------------------------------Footer----------------------------------------------- */
@@ -247,6 +251,8 @@ outline: 1px solid tomato*/
 
 /* ------------------------------------------------Portfolio: Projects---------------------------------------- */
 .projects-title {
+  margin-top: 20px;
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -255,6 +261,9 @@ outline: 1px solid tomato*/
 }
 
 .projects-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -264,11 +273,16 @@ outline: 1px solid tomato*/
   background-color: var(--secondary-background-color);
 }
 /* -----------------------------------------------Main WEB STUDIO ------------------------------------------- */
-/* ------------------------------------------------Heroe/ Banner------------------------------------------------ */
+/* -----------------------------Heroe/ Banner/ order a service ------------------------------------------------ */
+
 .order-service {
   background-color: var(--footer-color);
+  text-align: center;
 }
 .order-service-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -294,21 +308,47 @@ outline: 1px solid tomato*/
   color: var(--main-title-color);
 }
 /* -----------------------------------------------Our Features------------------------------------------- */
+.features-title {
+  margin-bottom: 50px;
+}
 .features-item-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
 }
 
+.features-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features-list {
+  margin-top: 94px;
+  /* ? */
+}
+
+/* -------------------------------------specialities----------- */
+.specialities-title
 /* ----------------------------------------------Our Team----------------------------------------------- */
 .team {
+  /* padding-top: 186px;
+  padding-right: 215px;
+  padding-bottom: 94px;
+  padding-left: 215px; */
+
   background-color: var(--background-section);
 }
+
 .team-item {
   background-color: var(--secondary-background-color);
 }
 .team-person {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -317,6 +357,10 @@ outline: 1px solid tomato*/
   color: var(--title-color);
 }
 .team-text {
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
