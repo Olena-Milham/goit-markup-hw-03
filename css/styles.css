@@ -13,6 +13,7 @@
   --background-section: #f5f4fa;
   --first-button-color: #f5f4fa;
   --second-button-color: #2196f3;
+  --card-border-color: #eeeeee;
 }
 
 /*--------------------------Service Classes--------------------------------------------*/
@@ -201,8 +202,13 @@ body {
   background-color: var(--footer-color);
 }
 
+.footer-address {
+  padding-bottom: 60px;
+}
 /*------------------------------------------------------ contact links---------------------------------------- */
-
+/* .footer-contacts {
+  display: flex;
+} */
 /*--------------------------------------add opacity to delute the color to make it softer --------
   1)color: var(--main-title-color);
     opacity: 60%; 
@@ -223,6 +229,10 @@ body {
 }
 /*--------------------------------------------------------logo------------------------------------------------*/
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-top: 60px;
+
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -253,6 +263,9 @@ body {
   color: var(--title-color);
   background-color: var(--first-button-color);
   cursor: pointer;
+  border-radius: 4px;
+  border-color: transparent;
+  /* padding: 6px, 22px; */
 }
 .filters-btn:hover,
 .filters-btn:focus,
@@ -261,13 +274,30 @@ body {
   background-color: var(--second-button-color);
 }
 
-/* ------------------------------------------------Portfolio: Projects---------------------------------------- */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filters-item:not(:last-child) {
+  margin-right: 30px;
+}
+/*------------------------------------------Portfolio: Projects---------------------------------------- */
 .portfolio-title {
   padding-top: 94px;
 }
 .projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   margin-top: 34px;
-  padding-bottom: 94px;
+  padding-bottom: 30px;
+}
+
+.projects-item {
+  margin-bottom: 30px;
+  border: 1px solid var(--card-border-color);
 }
 .projects-title {
   margin-top: 20px;
@@ -324,6 +354,8 @@ body {
   height: 50px;
   justify-content: center;
 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -332,13 +364,7 @@ body {
   background-color: var(--second-button-color);
   /* cursor: pointer; */
 }
-/* .button: {
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  top: 430px;
-} */
+
 .order-service-btn:active,
 .order-service-btn:focus {
   color: var(--main-title-color);
@@ -362,30 +388,35 @@ body {
 }
 
 .features-list {
-  margin-top: 94px;
-  /* ? */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* -------------------------------------specialities----------- */
-.specialities-title
+
+.specialities-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* ----------------------------------------------Our Team----------------------------------------------- */
 .team {
-  /* padding-top: 186px;
-  padding-right: 215px;
-  padding-bottom: 94px;
-  padding-left: 215px; */
-
   background-color: var(--background-section);
-}
-.team-title {
-  padding-top: 94px;
 }
 
 .team-list {
-  padding-bottom: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .team-item {
+  display: block;
   background-color: var(--secondary-background-color);
+  margin-right: 30px;
+  border: ;
 }
 .team-person {
   margin-top: 30px;
