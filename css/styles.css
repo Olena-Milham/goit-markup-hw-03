@@ -385,7 +385,8 @@ body {
   display: block;
   background-color: var(--secondary-background-color);
   margin-right: 30px;
-  /* border: ; */
+  border: 1px solid var(--card-border-color);
+  border-radius: 4px;
 }
 .team-person {
   margin-top: 30px;
