@@ -27,6 +27,17 @@
 .link {
   text-decoration: none;
 }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 1px solid blue; */
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -43,6 +54,7 @@
   padding-bottom: 94px;
   padding-top: 94px;
 }
+
 /* --------------------------------Main Selectors------------------------------------- */
 
 button {
@@ -106,26 +118,13 @@ body {
 
 /* ---------------------------NEW ------------------*/
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-
-  padding-left: 15px;
-  padding-right: 15px;
-  outline: 1px solid blue;
-}
-
-/* .container video2 
-39m 
-*/
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной илистрочно-блочной, но там тогда зазор справа */
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
 .header-link {
   /* geometry */
   display: flex;
@@ -154,11 +153,11 @@ body {
 
 .header-navigation {
   display: flex;
+  /* выравниваем относительно поперечной оси, то есть высоты*/
   align-items: center;
+  /*растягиваем по нужным сторонам  */
   justify-content: left;
 }
-
-/* auth nav ? */
 
 .header-contacts-list {
   display: flex;
@@ -167,36 +166,13 @@ body {
   margin-left: 12px;
 }
 
-/* .header-container {
-  display: flex;
-  margin-right: 0;
-/* выравниваем относительно поперечной оси, то есть высоты  */
-/* align-items: center; */
-/*растягиваем по нужным сторонам */
-/* justify-content: ; */
-/* }  */
-
-/* .header-item {
-  outline: 1px solid olive;
-  margin-right: 40px;
-}
-очистка крайней геометрии 
-
-.header-item: last child {
-  margin-right: 0;
-} */
+/* очистка крайней геометрии: один из вариантов .header-item: last child {
+  margin-right: 0;/* .header-item+header-item{
+  margin-left: 40px; или как я сделала  */
 
 .header-item:not(:last-child) {
   margin-right: 40px;
 }
-
-/* .header-item+header-item{
-  margin-left: 40px;
-} */
-.header-contacts {
-}
-/* 48 inline-blof - better for buttons as the blok itself is as wide as the page , however link is limited by li */
-
 /* ----------------------------------------------------Footer----------------------------------------------- */
 .footer {
   background-color: var(--footer-color);
@@ -206,13 +182,6 @@ body {
   padding-bottom: 60px;
 }
 /*------------------------------------------------------ contact links---------------------------------------- */
-/* .footer-contacts {
-  display: flex;
-} */
-/*--------------------------------------add opacity to delute the color to make it softer --------
-  1)color: var(--main-title-color);
-    opacity: 60%; 
-  2) add numbers to the color hex name , 60% =99 => footer-contacts-color -------------------------------------------*/
 
 .footer-address-link {
   font-family: "Roboto", sans-serif;
@@ -416,7 +385,7 @@ body {
   display: block;
   background-color: var(--secondary-background-color);
   margin-right: 30px;
-  border: ;
+  /* border: ; */
 }
 .team-person {
   margin-top: 30px;
