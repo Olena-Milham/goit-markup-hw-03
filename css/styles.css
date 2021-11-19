@@ -14,6 +14,7 @@
   --first-button-color: #f5f4fa;
   --second-button-color: #2196f3;
   --card-border-color: #eeeeee;
+  --project-item-gap: 30px;
 }
 
 /*--------------------------Service Classes--------------------------------------------*/
@@ -77,13 +78,66 @@ body {
   background-color: var(--header-color);
   border-bottom: 1px solid #ececec;
 }
+
+.nav-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-navigation {
+  display: flex;
+  /* выравниваем относительно поперечной оси, то есть высоты*/
+  align-items: center;
+  /*растягиваем по нужным сторонам  */
+  justify-content: center;
+}
+
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  word-spacing: -6px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.header-web {
+  color: var(--main-accent-color);
+}
+.header-studio {
+  color: var(--logo-color);
+}
+
+.header-list {
+  display: flex;
+  padding-left: 93px;
+}
+
+/* очистка крайней геометрии: один из вариантов .header-item: last child {
+  margin-right: 0;/* .header-item+header-item{
+  margin-left: 40px; или как я сделала  */
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
 .header-link {
+  /* geometry */
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* font + stiles  */
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  /* decore */
 }
+
 .header-link:hover,
 .header-link:focus {
   color: var(--main-accent-color);
@@ -100,65 +154,6 @@ body {
   color: var(--main-accent-color);
 }
 
-.header-logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  word-spacing: -6px;
-}
-.header-web {
-  color: var(--main-accent-color);
-}
-.header-studio {
-  color: var(--logo-color);
-}
-
-/* ---------------------------NEW ------------------*/
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
-.header-link {
-  /* geometry */
-  display: flex;
-  padding-top: 21px;
-  padding-bottom: 21px;
-
-  /* font + stiles  */
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-color);
-
-  /* decore */
-}
-
-.header {
-  padding-top: 36px;
-  padding-bottom: 32px;
-}
-.header-list {
-  display: flex;
-  padding-left: 93px;
-}
-
-.header-navigation {
-  display: flex;
-  /* выравниваем относительно поперечной оси, то есть высоты*/
-  align-items: center;
-  /*растягиваем по нужным сторонам  */
-  justify-content: left;
-}
-
 .header-contacts-list {
   display: flex;
 }
@@ -166,21 +161,18 @@ body {
   margin-left: 12px;
 }
 
-/* очистка крайней геометрии: один из вариантов .header-item: last child {
-  margin-right: 0;/* .header-item+header-item{
-  margin-left: 40px; или как я сделала  */
-
-.header-item:not(:last-child) {
-  margin-right: 40px;
+.header-contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
+
 /* ----------------------------------------------------Footer----------------------------------------------- */
 .footer {
   background-color: var(--footer-color);
-}
-
-.footer-address {
+  padding-top: 60px;
   padding-bottom: 60px;
 }
+
 /*------------------------------------------------------ contact links---------------------------------------- */
 
 .footer-address-link {
@@ -200,7 +192,6 @@ body {
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
-  padding-top: 60px;
 
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -211,7 +202,9 @@ body {
   /*--------------------------------------------add negative word-spacing to bring letters together----------*/
   word-spacing: -5px;
 }
-
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer-web {
   color: var(--main-accent-color);
 }
@@ -234,8 +227,9 @@ body {
   cursor: pointer;
   border-radius: 4px;
   border-color: transparent;
-  /* padding: 6px, 22px; */
+  padding: 6px 22px;
 }
+
 .filters-btn:hover,
 .filters-btn:focus,
 .filters-btn:active {
@@ -247,31 +241,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 34px;
 }
 .filters-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 8px;
 }
 /*------------------------------------------Portfolio: Projects---------------------------------------- */
 .portfolio-title {
-  padding-top: 94px;
+  display: none;
 }
 .projects {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 34px;
-  padding-bottom: 30px;
+  margin-left: calc(-1 * var(--project-item-gap));
+  margin-top: calc(-1 * var(--project-item-gap));
 }
 
 .projects-item {
-  margin-bottom: 30px;
-  border: 1px solid var(--card-border-color);
+  flex-basis: calc(100% / 3 -30px);
+  margin-left: var(--project-item-gap);
+  margin-top: var(--project-item-gap);
+  outline: 1px solid var(--card-border-color);
 }
 .projects-title {
-  margin-top: 20px;
-  margin-bottom: 4px;
-
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -280,13 +274,16 @@ body {
 }
 
 .projects-text {
-  margin-top: 0;
+  margin-top: 4px;
   margin-bottom: 0;
-  padding-bottom: 20px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+.projects-content {
+  padding: 20px 24px;
 }
 .projects-item {
   background-color: var(--secondary-background-color);
@@ -295,17 +292,22 @@ body {
 /* -----------------------------Heroe/ Banner/ order a service ------------------------------------------------ */
 
 .order-service {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--footer-color);
   text-align: center;
 }
 .order-service-title {
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* text-align: center; */
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-color);
@@ -339,37 +341,50 @@ body {
   color: var(--main-title-color);
 }
 /* -----------------------------------------------Our Features------------------------------------------- */
+.features {
+  padding-bottom: 0;
+}
 .features-title {
-  margin-bottom: 50px;
+  display: none;
+}
+
+.features-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-item {
+  width: 270px;
 }
 .features-item-title {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
 }
-
 .features-text {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-.features-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 /* -------------------------------------specialities----------- */
 
 .specialities-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: ;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
+.specialities-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 /* ----------------------------------------------Our Team----------------------------------------------- */
 .team {
   background-color: var(--background-section);
