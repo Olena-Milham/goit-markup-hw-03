@@ -374,16 +374,14 @@ body {
 .specialities-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: ;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-left: calc(-1 * var(--project-item-gap));
+  margin-top: calc(-1 * var(--project-item-gap));
 }
 
 .specialities-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  flex-basis: calc(100% / 3 - var(--project-item-gap));
+  margin-left: var(--project-item-gap);
+  margin-top: var(--project-item-gap);
 }
 /* ----------------------------------------------Our Team----------------------------------------------- */
 .team {
@@ -392,19 +390,24 @@ body {
 
 .team-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin-left: calc(-1 * var(--project-item-gap));
+  margin-top: calc(-1 * var(--project-item-gap));
 }
 
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-item {
-  display: block;
   background-color: var(--secondary-background-color);
-  margin-right: 30px;
-  border: 1px solid var(--card-border-color);
+  outline: 1px solid var(--card-border-color);
   border-radius: 4px;
+  margin-top: var(--project-item-gap);
+  margin-left: var(--project-item-gap);
 }
 .team-person {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -417,7 +420,7 @@ body {
 .team-text {
   margin-top: 0;
   margin-bottom: 0px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 
   font-size: 16px;
   line-height: 1.19;
