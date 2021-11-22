@@ -27,6 +27,7 @@
 }
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -251,7 +252,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filters-item:not(:last-child) {
   margin-right: 8px;
